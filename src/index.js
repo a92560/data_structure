@@ -23,4 +23,11 @@
 // import './HashTable';
 
 // 导入树结构的封装及测试代码
-import './Tree';
+// import './Tree';
+
+// es6_module 测试代码
+// import './es6_module/index';
+// import './es6_module/b2';
+// import './class_extend/test_es6';
+// import './regex/test_money';
+import './event_bus/index';
