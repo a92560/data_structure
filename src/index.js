@@ -30,4 +30,6 @@
 // import './es6_module/b2';
 // import './class_extend/test_es6';
 // import './regex/test_money';
-import './event_bus/index';
+// import './event_bus/index';
+// import './curry/index';
+import './big_str_plus';
