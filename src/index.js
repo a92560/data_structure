@@ -32,4 +32,6 @@
 // import './regex/test_money';
 // import './event_bus/index';
 // import './curry/index';
-import './big_str_plus';
+// import './big_str_plus';
+// import './bubble_sort';
+import './selection_sort';
