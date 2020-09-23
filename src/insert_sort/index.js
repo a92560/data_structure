@@ -13,15 +13,34 @@ function insertSort(arr) {
   const len = arr.length;
 
   for (let i = 1; i < len; i ++) {
-    let j = i;
-    while (arr[j] < arr[j - 1] && j > 0) {
-      let temp = arr[j];
-      arr[j] = arr[j - 1];
-      arr[j - 1] = temp;
-      j --;
-    }
+    // let j = i;
+    // while (arr[j] < arr[j - 1] && j > 0) {
+    //   let temp = arr[j];
+    //   arr[j] = arr[j - 1];
+    //   arr[j - 1] = temp;
+    //   j --;
+    // }
+    // const cur = arr[i];
+    const cur = arr[i];
+    const idx = binarySearch(arr, i)
+    arr.splice(i, 1);
+    arr.splice(idx, 0, cur);
   }
   return arr;
+}
+
+function binarySearch(arr, idx) {
+  let begin = 0;
+  let end = idx;
+  while (begin < end) {
+    let mid = Math.floor((begin + end) / 2);
+    if (arr[idx] < arr[mid]) {
+      end = mid;
+    } else {
+      begin = mid + 1;
+    }
+  }
+  return begin;
 }
 
 console.log(insertSort(arr))
