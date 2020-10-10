@@ -41,4 +41,6 @@
 // import './my_stack';
 // import './my_queue';
 // import './priority_queue';
-import './linked_list';
+// import './linked_list';
+// import './doubly_linked_list';
+import './binary_tree';

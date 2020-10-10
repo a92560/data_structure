@@ -1,4 +1,4 @@
-function LinkedList() {
+export function LinkedList() {
   // 头结点
   this.head = null;
   // 链表长度
@@ -221,22 +221,22 @@ function LinkedList() {
 }
 
 const linkedList = new LinkedList();
-linkedList.append('abc');
-linkedList.append('cba');
-console.log(linkedList.toString());
-console.log(linkedList);
-linkedList.insert(2, 'npc');
-linkedList.insert(1, 'girl');
+// linkedList.append('abc');
+// linkedList.append('cba');
+// console.log(linkedList.toString());
+// console.log(linkedList);
+// linkedList.insert(2, 'npc');
+// linkedList.insert(1, 'girl');
 // linkedList.insert(4, 'boy');
 // linkedList.update(4, 'body');
-console.log(linkedList.toString());
+// console.log(linkedList.toString());
 // linkedList.removeAt(3);
 // // linkedList.removeAt(0);
-linkedList.remove('cba');
-linkedList.remove('girl');
-console.log(linkedList.toString());
-console.log(linkedList.isEmpty());
-console.log(linkedList.size());
+// linkedList.remove('cba');
+// linkedList.remove('girl');
+// console.log(linkedList.toString());
+// console.log(linkedList.isEmpty());
+// console.log(linkedList.size());
 // console.log(linkedList.get(1));
 // console.log(linkedList.get(-1));
 // console.log(linkedList.get(4));
