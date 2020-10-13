@@ -29,7 +29,8 @@ module.exports = {
             presets: [
               [require.resolve('@babel/preset-env'), {modules: false}]
             ],
-            cacheDirectory: true
+            plugins: ["@babel/plugin-transform-runtime"],
+            cacheDirectory: true,
           }
         }
       }

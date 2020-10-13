@@ -44,4 +44,6 @@
 // import './linked_list';
 // import './doubly_linked_list';
 // import './binary_tree';
-import './insert_sort_new';
+// import './insert_sort_new';
+// import './arr_reduce';
+import './redux_compose';
