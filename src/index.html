@@ -3,10 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <title>JavaScript 数据结构与算法</title>
+  <style>
+    .A {
+      font-size: 20px;
+    }
+    .B {
+      font-size: 16px;
+    }
+    p {
+      color: red;
+    }
+    div ~ p {
+      color: green;
+    }
+    li.item + li {
+      background: red;
+    }
+    .A + ul {
+      background: red;
+    }
+    input[type = 'text'] {
+      width: 400px;
+    }
+    div ~ input {
+      width: 700px;
+    }
+    input {
+      width: 600px;
+    }
+  </style>
 </head>
 <body>
 <body>
 <h1>JavaScript 数据结构与算法</h1>
 </body>
+  <div class="A B">
+    Test
+    <span>
+      SpanTest
+    </span>
+    <ul class="ul">
+      <li> ul1</li>
+      <li class="item">
+        <ul>
+          <li> ul2</li>
+          <li> ul2 - 2</li>
+        </ul>
+      </li>
+      <li> ul1 - 3</li>
+    </ul>
+    <!--<p>
+      pTest2
+      <p>
+        pTest3
+      </p>
+    </p>-->
+  </div>
+  <p> afterDiv1 </p>
+  <p> afterDiv2 </p>
+  <input type="text"/>
 </body>
+<script>
+
+</script>
 </html>
