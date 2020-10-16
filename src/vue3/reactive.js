@@ -102,11 +102,11 @@ function track(target, key) { // 如果对应target的key发生变化了 我就�
   if (effect) { // 有对应关系 创建关联
     let depsMap = targetsMap.get(target);
     if (!depsMap) {
-      targetsMap.set(target, depsMap = new Map);
+      targetsMap.set(target, (depsMap = new Map));
     }
     let deps = depsMap.get(key);
     if (!deps) {
-      depsMap.set(key, deps = new Set)
+      depsMap.set(key, (deps = new Set))
     }
     if (!deps.has(effect)) {
       deps.add(effect);
