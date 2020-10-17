@@ -19,7 +19,7 @@
 //
 // console.log(curryAdd(1)(2)(3)(4));
 
-function curry(fn, args) {
+/*function curry(fn, args) {
   const length = fn.length;
   args = args || [];
   return function() {
@@ -30,10 +30,35 @@ function curry(fn, args) {
       return fn.apply(this, _args);
     }
   }
+}*/
+/**
+ * @param {function} fn - 需要执行的函数
+ * @param {array} args - 可能传入的参数
+ * @return {function} anomynous - 返回函数
+ * @description: 偏函数
+ * @author: Darren
+ * @date: 2020/10/18
+ */
+function curry(fn, args) {
+  // 需要执行函数的参数个数
+  const len = fn.length;
+  // 对参数做修正
+  args = args || [];
+  return function() {
+    let _args = args.concat([...arguments]);
+    if (_args.length >= len) {
+      return fn.apply(this, _args);
+    } else {
+      return curry.call(this, fn, _args);
+    }
+  }
 }
 const add = (a, b, c, d) => {
   return a + b + c + d;
 }
 const curryAdd = curry(add);
-console.log(curryAdd(1)(2)(3)(4));
+const curryAdd1 = curry(add)(1)(3)(5);
+console.log(curryAdd(1)(2)(3)(6));
 console.log(curryAdd(1, 2)(3, 4));
+console.log(curryAdd1(7));
+console.log(curryAdd1(9));
