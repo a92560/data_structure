@@ -17,13 +17,11 @@ function reactive(target) {
 }
 
 function createReactiveObject(target) {
-  // debugger;
   if (!isObject(target)) {
     return target;
   }
-  let proxy = toProxy.get(target); // 如果代理过了 直接返回即可
-  if (proxy) {
-    return proxy;
+  if (toProxy.has(target)) { // 如果代理过了 直接返回即可
+    return toProxy.get(target);
   }
   if (toRaw.has(target)) {
     return target;
@@ -46,9 +44,8 @@ function createReactiveObject(target) {
       // console.log(target, key, receiver);
       let hasKey = hasOwn(target, key);
       let oldVal = target[key];
-      let res = Reflect.set(target, key, receiver);
+      let res = Reflect.set(target, key, value, receiver);
       // 收集依赖
-
       if (!hasKey) {
         // console.log('新增属性');
         trigger(target, 'add', key);
@@ -88,7 +85,7 @@ function createReactiveEffect(fn) {
 function run(effect, fn) {
   try {
     activeEffectStacks.push(effect);
-    fn();
+    return fn();
   } finally {
     activeEffectStacks.pop();
   }
@@ -106,7 +103,7 @@ function track(target, key) { // 如果对应target的key发生变化了 我就�
     }
     let deps = depsMap.get(key);
     if (!deps) {
-      depsMap.set(key, (deps = new Set))
+      depsMap.set(key, (deps = new Set()))
     }
     if (!deps.has(effect)) {
       deps.add(effect);
@@ -132,11 +129,11 @@ function trigger(target, type, key) {
 // let proxy = reactive({ a: { b: 1 } });
 // proxy.a.name = 'Darren';
 // console.log(proxy)
-let proxy = reactive({ name: 'Darren' });
+let obj = reactive({ name: 'Darren' });
 
 effect(() => { // effect会先执行两次 默认会先执行一次 之后依赖的数据变化了 会再次执行
-  console.log('effect', proxy.name)
+  console.log('effect', obj.name)
 })
-proxy.name = 'Darren1'
-proxy.name = 'Darren1'
+obj.name = 'Darren1'
+obj.name = 'Darren1'
 // console.log(proxy)

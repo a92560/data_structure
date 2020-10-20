@@ -30,7 +30,7 @@
 // import './class_extend/test_es6';
 // import './regex/test_money';
 // import './event_bus/index';
-import './curry/index';
+// import './curry/index';
 // import './big_str_plus';
 // import './bubble_sort';
 // import './selection_sort';
@@ -49,3 +49,6 @@ import './curry/index';
 // import './redux_compose';
 // import './merge_sort';
 // import './vue3/reactive';
+// import './vue3/reactive_copy';
+// import './quick_sort/index_simple';
+import './num_is_island';

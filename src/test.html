@@ -4,6 +4,20 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        border: 10px solid red;
+        padding: 20px;
+        margin: 20px;
+        background: blue;
+      }
+      #borderBox {
+        box-sizing: border-box;
+      }
+      #contentBox {
+        box-sizing: content-box;
+      }
       .flex-center {
         width: 100%;
         height: 100%;
@@ -22,10 +36,29 @@
 </head>
 <body>
 <div class="flex-center">
-  <img src="https://img.alicdn.com/tfs/TB1OaEjIhD1gK0jSZFsXXbldVXa-1190-70.png" alt="">
+  <!--<img src="https://img.alicdn.com/tfs/TB1OaEjIhD1gK0jSZFsXXbldVXa-1190-70.png" alt="">
   <p class="indent-css">
     疯狂的是否考虑附件两款都是积分解放立刻撒旦经理副经理法艰苦拉萨大家发了就发绿卡的撒解放了解放立刻撒旦发简历发JFK拉萨大家发链接分厘卡圣诞节分类解放昆仑山搭街坊历史决定论法艰苦拉萨的飞机拉升阶段了房价开始拉到房间里可是搭街坊拉萨决定了房间里洒家分厘卡
-  </p>
+  </p>-->
+  <div class="box" id="borderBox"></div>
+  <div class="box" id="contentBox"></div>
 </div>
 </body>
+<script>
+  var name = 'Darren';
+  const obj = {
+    name: 'Darren_1',
+    showName() {
+      const that = this;
+      return function () {
+        console.log(this.name);
+        console.log(that.name);
+      }
+    }
+  }
+  // obj.showName()();
+
+  var arr = ['b', 3, 5, 6, 'a'];
+  console.log(arr.sort());
+</script>
 </html>
