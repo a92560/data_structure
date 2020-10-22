@@ -51,4 +51,9 @@
 // import './vue3/reactive';
 // import './vue3/reactive_copy';
 // import './quick_sort/index_simple';
-import './num_is_island';
+// import './num_is_island';
+// import './longest_palindrome/index_1';
+// import './spiral_order';
+// import './longest_common_subsequence';
+// import './lcs';
+import './curry/index_memorize';
