@@ -56,4 +56,12 @@
 // import './spiral_order';
 // import './longest_common_subsequence';
 // import './lcs';
-import './curry/index_memorize';
+// import './interviewee/index2';
+// import './decode_string';
+// import './flat_arr';
+// import './simplify_path';
+// import './bind_pollify';
+// import './es6';
+// import './scrolling_window';
+// import './restoredIpAddress';
+import './reverseKGroup';
