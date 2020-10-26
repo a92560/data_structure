@@ -65,7 +65,7 @@
   * 返回一个promise对象，只有当所有promise都成功时，promise的状态才成功
   *
   * */
-  Pormise.all = function(value) {
+  Promise.all = function(value) {
 
   }
 
