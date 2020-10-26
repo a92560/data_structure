@@ -51,4 +51,17 @@
 // import './vue3/reactive';
 // import './vue3/reactive_copy';
 // import './quick_sort/index_simple';
-import './num_is_island';
+// import './num_is_island';
+// import './longest_palindrome/index_1';
+// import './spiral_order';
+// import './longest_common_subsequence';
+// import './lcs';
+// import './interviewee/index2';
+// import './decode_string';
+// import './flat_arr';
+// import './simplify_path';
+// import './bind_pollify';
+// import './es6';
+// import './scrolling_window';
+// import './restoredIpAddress';
+import './reverseKGroup';
